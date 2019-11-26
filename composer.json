@@ -1,0 +1,39 @@
+{
+  "name": "wdmg/yii2-tagsinput",
+  "description": "Bootstrap3 tags input widget for Yii2",
+  "keywords": ["yii", "yii2", "extension", "tags", "input", "bootstrap", "widget", "wdmg"],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "version": "1.0.1",
+  "homepage": "https://github.com/wdmg/yii2-tagsinput",
+  "support": {
+    "source": "https://github.com/wdmg/yii2-tagsinput",
+    "issues": "https://github.com/wdmg/yii2-tagsinput/issues"
+  },
+  "authors": [
+    {
+      "name": "Alexsander Vyshnyvetskyy",
+      "email": "alex.vyshnyvetskyy@gmail.com"
+    },
+    {
+      "name": "W.D.M.Group, Ukraine",
+      "email": "wdmg.com.ua@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "^2.0.20",
+    "yiisoft/yii2-bootstrap": "*",
+    "bower-asset/bootstrap-tagsinput-plugin": "^1.0.2"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "wdmg\\widgets\\": "src"
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
