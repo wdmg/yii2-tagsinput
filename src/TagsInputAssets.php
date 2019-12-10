@@ -21,7 +21,7 @@ class TagsInputAssets extends AssetBundle
         parent::init();
         $this->css = YII_DEBUG ? ['css/tagsinput.css'] : ['css/tagsinput.min.css'];
         $this->js = YII_DEBUG ? ['js/tagsinput.js'] : ['js/tagsinput.min.js'];
-        $this->depends = [\yii\web\JqueryAsset::className()];
+        $this->depends = [\yii\web\JqueryAsset::class];
     }
 
 }
