@@ -6,7 +6,7 @@ namespace wdmg\widgets;
  * Yii2 TagsInput
  *
  * @category        Widgets
- * @version         1.0.2
+ * @version         1.0.3
  * @author          Alexsander Vyshnyvetskyy <alex.vyshnyvetskyy@gmail.com>
  * @link            https://github.com/wdmg/yii2-tagsinput
  * @copyright       Copyright (c) 2019 - 2020 W.D.M.Group, Ukraine

@@ -1,4 +1,4 @@
-[![Progress](https://img.shields.io/badge/required-Yii2_v2.0.13-blue.svg)](https://packagist.org/packages/yiisoft/yii2)
+[![Progress](https://img.shields.io/badge/required-Yii2_v2.0.33-blue.svg)](https://packagist.org/packages/yiisoft/yii2)
 [![Github all releases](https://img.shields.io/github/downloads/wdmg/yii2-tagsinput/total.svg)](https://GitHub.com/wdmg/yii2-tagsinput/releases/)
 [![GitHub version](https://badge.fury.io/gh/wdmg/yii2-tagsinput.svg)](https://github.com/wdmg/yii2-tagsinput)
 ![Progress](https://img.shields.io/badge/progress-in_development-red.svg)
@@ -9,7 +9,7 @@ Tags input widget for Yii2
 
 # Requirements 
 * PHP 5.6 or higher
-* Yii2 v.2.0.20 and newest
+* Yii2 v.2.0.33 and newest
 * Yii2 Bootstrap
 * [Bootstrap TagsInput](https://github.com/wdmg/bootstrap-tagsinput) v.1.0.2 and newest.
 
@@ -80,4 +80,5 @@ TagsInput extends InputWidget so you can use any options available for this widg
 
             
 # Status and version
+* v.1.0.3 - Up to date dependencies
 * v.1.0.2 - Fixed deprecated class declaration and added README.md
