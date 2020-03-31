@@ -36,7 +36,7 @@ Example of standalone widget:
             'minInput' => 2,
             'maxTags' => 100
         ]
-    ])
+    ]);
     
     ?>
 
@@ -50,17 +50,19 @@ Example of use with ActiveForm:
     $form = ActiveForm::begin();
     ...
     
-    echo $form->field($model, 'post_tags')->widget(TagsInput::class, [
+    echo $form->field($model, 'tags')->widget(TagsInput::class, [
         'options' => [
-            'class' => 'form-control'
+            'id' => 'post-tags',
+            'class' => 'form-control',
+            'placeholder' => 'Type your tags here...'
         ],
         'pluginOptions' => [
-            'autocomplete' => Yii::$app->request->absoluteUrl,
+            'autocomplete' => '//example.com/api/',
             'format' => 'json',
             'minInput' => 2,
             'maxTags' => 100
         ]
-    ])->input('text', ['placeholder' => Yii::t('app/modules/newsletters', 'Type recipients...')]);
+    ]);
     ...
     
     ActiveForm::end();
@@ -80,5 +82,6 @@ TagsInput extends InputWidget so you can use any options available for this widg
 
             
 # Status and version
+* v.1.0.4 - Fixed widget ID and init after Pjax reloading
 * v.1.0.3 - Up to date dependencies
 * v.1.0.2 - Fixed deprecated class declaration and added README.md

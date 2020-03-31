@@ -6,7 +6,7 @@ namespace wdmg\widgets;
  * Yii2 TagsInput
  *
  * @category        Widgets
- * @version         1.0.3
+ * @version         1.0.4
  * @author          Alexsander Vyshnyvetskyy <alex.vyshnyvetskyy@gmail.com>
  * @link            https://github.com/wdmg/yii2-tagsinput
  * @copyright       Copyright (c) 2019 - 2020 W.D.M.Group, Ukraine
@@ -54,12 +54,16 @@ class TagsInput extends InputWidget
      */
     public function run()
     {
-        // Build select
-        $input = Html::activeInput('text', $this->model, $this->attribute, $this->items, $this->options);
+        // Get input id
+        if (isset($this->options['id']))
+            $this->tagsinputId = $this->options['id'];
+        else
+            $this->tagsinputId = $this->getId();
 
-        // Get select id
-        $this->tagsinputId = $this->options['id'];
-        $this->pluginOptions['id'] = $this->tagsinputId;
+        $this->options['id'] = $this->tagsinputId;
+
+        // Build tags input
+        $input = Html::activeInput('text', $this->model, $this->attribute, $this->options);
 
         // Register assets
         $this->registerAssets();
@@ -81,6 +85,9 @@ class TagsInput extends InputWidget
         // Parse plugin options and insert inline
         $pluginOptions = !empty($this->pluginOptions) ? Json::encode($this->pluginOptions) : '';
         $js[] = "; jQuery('#" . $this->tagsinputId . "').tagsinput($pluginOptions);";
+        $js[] = "; jQuery(document).on('pjax:success', function() {
+            jQuery('#" . $this->tagsinputId . "').tagsinput($pluginOptions);
+        });";
 
         // Register tagsinput component initial script
         $view->registerJs(implode("\n", $js));
